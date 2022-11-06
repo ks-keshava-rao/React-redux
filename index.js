@@ -31,7 +31,7 @@ const reducer = (prevState=initialState,action) =>{
     switch(action.type){
         case UPDATE_DATA : return {
             ...prevState,//for persisting the previous state other properties 
-           currentData: prevState.initialData + 1
+           currentData: prevState.currentData + 1
         }
         default : return prevState;
     }

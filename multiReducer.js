@@ -1,3 +1,4 @@
+// Combined reducer with the middleware logger 
 const redux = require('redux');
 const reduxLogger = require('redux-logger');
 const CreateStore = redux.createStore;

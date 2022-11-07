@@ -42,4 +42,5 @@ const unsubscribe = store.subscribe(()=>console.log("updated store",store.getSta
 store.dispatch(updateData())
 store.dispatch(updateData())
 store.dispatch(updateData())
+store.dispatch(updateData())
 unsubscribe();

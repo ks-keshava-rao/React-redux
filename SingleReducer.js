@@ -18,20 +18,31 @@ Redux store :-
 */
 const CreateStore = redux.createStore;
 const UPDATE_DATA = "fetch";
+const UPDATE2_DATA = "fetch2";
 //action creator function 
 const updateData = () => {
     return {
         type : UPDATE_DATA
     }
 }
+const updateSecondData = () =>{
+    return {
+        type : UPDATE2_DATA
+    }
+}
 const initialState = {
-    currentData : 20
+    currentData : 20,
+    secondData : 20
 }
 const reducer = (prevState=initialState,action) =>{
     switch(action.type){
         case UPDATE_DATA : return {
             ...prevState,//for persisting the previous state other properties 
            currentData: prevState.currentData + 1
+        }
+        case UPDATE2_DATA : return {
+            ...prevState,
+            secondData : prevState.secondData - 1
         }
         default : return prevState;
     }
@@ -42,5 +53,7 @@ const unsubscribe = store.subscribe(()=>console.log("updated store",store.getSta
 store.dispatch(updateData())
 store.dispatch(updateData())
 store.dispatch(updateData())
-store.dispatch(updateData())
+store.dispatch(updateSecondData())
+store.dispatch(updateSecondData())
+store.dispatch(updateSecondData())
 unsubscribe();

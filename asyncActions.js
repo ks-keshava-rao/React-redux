@@ -3,7 +3,6 @@ const createStore = redux.legacy_createStore;
 const applyMiddleware = redux.applyMiddleware;
 const thunkMiddleware = require('redux-thunk').default;
 const axios = require('axios');
-
 const initialState ={
     loading :false,
     users : [],
@@ -12,7 +11,6 @@ const initialState ={
 const  FETCH_USER_REQUEST = "FETCH_USER_REQUEST"
 const  FETCH_USER_SUCCESS = "FETCH_USER_SUCCESS"
 const  FETCH_USER_FAILURE = "FETCH_USER_FAILURE"
-
 const fetchUsersRequest =  () =>{
     return {
         type : FETCH_USER_REQUEST

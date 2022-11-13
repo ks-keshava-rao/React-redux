@@ -6,6 +6,9 @@ const CakeContainer = (props) => {
     return (
         <>
             <div>
+                <h1>
+                    Connect function
+                </h1>
                 <h2>
                     No of cakes- {props.noOfCakes}
                 </h2>
@@ -27,7 +30,8 @@ const mapDispatchToProps = dispatch => {
         buyCake: () => dispatch(buyCake())
     }
 }
-export default connect(
+export default connect( 
     mapStateToProps,
     mapDispatchToProps
 )(CakeContainer);
+//connect is used to connect the component with the redux store 
